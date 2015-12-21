@@ -5,13 +5,9 @@
  */
 package cliente;
 
-/**
- *
- * @author david
- */
 import java.io.*;
 import java.net.*;
-public class Cliente {
+public class EchoClient {
     
 
     /**
