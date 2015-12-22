@@ -3,27 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cliente;
+package echos;
 
 import java.io.*;
 import java.net.*;
+ 
 public class EchoClient {
-    
+    public static void main(String[] args) throws IOException {
 
-    /**
-     * @param args the command line arguments
-     */
-    
-     public static void main(String[] args) throws IOException {
-         
-//        if (args.length != 2) {
-//            System.err.println(
-//                "Usage: java EchoClient <host name> <port number>");
-//            System.exit(1);
-//        }
-// 
         String hostName = "localhost";
-        int portNumber = 8889;
+        int portNumber = 5566;
  
         try (
             Socket echoSocket = new Socket(hostName, portNumber);
@@ -37,6 +26,7 @@ public class EchoClient {
                     new InputStreamReader(System.in))
         ) {
             String userInput;
+            System.out.println("[escriba 'desconectar' para desconectarse]");
             while ((userInput = stdIn.readLine()) != null) {
                 out.println(userInput);
                 System.out.println("echo: " + in.readLine());
@@ -49,7 +39,5 @@ public class EchoClient {
                 hostName);
             System.exit(1);
         } 
-    }    // TODO code application logic here
     }
-    
-
+}
