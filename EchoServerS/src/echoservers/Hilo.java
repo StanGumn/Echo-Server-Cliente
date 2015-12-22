@@ -27,7 +27,7 @@ public class Hilo extends Thread {
            
             BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
             PrintWriter writer = new PrintWriter(client.getOutputStream(), true);
-            writer.println("Ingrese el Id del destino");
+            //writer.println("Para cerrar coneion, escriba chao");
             
             threadID = currentThread().getId();
             /*writer.println("Ingrese el ID del destinatario\n");
